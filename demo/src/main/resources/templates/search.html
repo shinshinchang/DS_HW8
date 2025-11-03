@@ -1,0 +1,41 @@
+<!-- src/main/resources/templates/search.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="'搜尋：' + ${q}">搜尋結果</title>
+  <style>
+    body { background:#9fdbf5; font-family: ui-sans-serif, system-ui; }
+    .wrap { max-width: 920px; margin: 40px auto; }
+    .top { text-align:center; margin-bottom:20px; }
+    .box { background:#fff; padding:20px 24px; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+    form { margin-bottom:20px; text-align:center; }
+    input[type=text]{ width:60%; padding:10px 12px; border:1px solid #ddd; border-radius:10px; font-size:16px; }
+    button{ padding:10px 16px; margin-left:8px; border-radius:10px; border:none; cursor:pointer; }
+    .item { padding:14px 6px; border-bottom:1px dashed #eee; }
+    .item:last-child{ border-bottom:0; }
+    .item a { font-weight:600; text-decoration:none; }
+    .snippet { color:#444; margin-top:6px; white-space:pre-wrap; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <h2>SSCoogle</h2>
+    <form action="/search" method="get">
+      <input type="text" name="q" th:value="${q}" required/>
+      <button type="submit">搜尋</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <div th:if="${#lists.isEmpty(results)}">沒有找到結果。</div>
+    <div th:each="r : ${results}" class="item">
+      <div><a th:href="${r.link}" th:text="${r.title}" target="_blank" rel="noreferrer noopener">Title</a></div>
+      <div class="snippet" th:text="${r.snippet}">snippet...</div>
+      <div style="font-size:12px;color:#666;" th:text="${r.link}">link</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

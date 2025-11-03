@@ -1,0 +1,27 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>My Boogle 🐻</title>
+  <style>
+    body { background:#9fdbf5; font-family: ui-sans-serif, system-ui; }
+    .wrap { max-width: 720px; margin: 80px auto; text-align: center; }
+    h1 { font-size: 42px; margin-bottom: 24px; }
+    .card { background:#fff; padding:28px; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,.08); }
+    input[type=text]{ width:72%; padding:12px 14px; border:1px solid #ddd; border-radius:10px; font-size:16px; }
+    button{ padding:12px 18px; margin-left:8px; border-radius:10px; border:none; cursor:pointer; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SSCoogle</h1>
+  <div class="card">
+    <form action="/search" method="get">
+      <input type="text" name="q" placeholder="輸入關鍵字" required />
+      <button type="submit">搜尋</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
