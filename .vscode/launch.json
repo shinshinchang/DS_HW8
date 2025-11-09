@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<boogle>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "hw8.demo.DemoApplication",
+            "projectName": "boogle",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
