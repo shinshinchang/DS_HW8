@@ -6,9 +6,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>boogle</artifactId>
+  <artifactId>SSCoogle</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>boogle</name>
+  <name>SSCoogle</name>
   <description>HW8 Google CSE Demo</description>
 
   <parent>
